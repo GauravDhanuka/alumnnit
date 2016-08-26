@@ -21,11 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  database: alumni_mnnit
-  username: root
-  password: <%= ENV['DATABASE_PASSWD'] %>
-  host: 127.0.0.1
-  port: 3306
+  <<: *default
+  database: db/production.sqlite3
 
